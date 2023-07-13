@@ -1,0 +1,52 @@
+const slides = [
+	{
+		"image":"slide1.jpg",
+		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
+	},
+	{
+		"image":"slide2.jpg",
+		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
+	},
+	{
+		"image":"slide3.jpg",
+		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
+	},
+	{
+		"image":"slide4.png",
+		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
+	}
+]
+
+/** Initialisation à l'ouverture de la page **/
+var index = 1;
+document.querySelector('#dot_1').classList.toggle('dot_selected');
+
+/** Connexion aux flêche et image du carrousel **/
+var arrowArrowLeft = document.querySelector('.arrow_left');
+var arrowArrowRight = document.querySelector('.arrow_right');
+var imageCarrousel = document.querySelector('.banner-img');
+
+
+/*** Flêche Gauche ***/
+arrowArrowLeft.addEventListener("click",function(){
+	
+	document.querySelector('#dot_'+index).classList.toggle('dot_selected');
+	index-=1;
+	imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`;
+	imageCarrousel.alt = `${slides[index].tagLine}`;
+	(index<=0)?index=4:index;
+	document.querySelector('#dot_'+index).classList.toggle('dot_selected');
+	
+});
+
+/*** Flêche Droite ***/
+arrowArrowRight.addEventListener("click",function(){
+
+	document.querySelector('#dot_'+index).classList.toggle('dot_selected');
+	index+=1;
+	(index>4)?index=1:index;
+	document.querySelector('#dot_'+index).classList.toggle('dot_selected');
+	imageCarrousel.src = `./assets/images/slideshow/${slides[index-1].image}`;
+	imageCarrousel.alt = `${slides[index-1].tagLine}`;
+
+});
