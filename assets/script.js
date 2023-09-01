@@ -71,6 +71,3 @@ arrowArrowRight.addEventListener("click",function(){
 	imageCarrousel.alt = `${slides[index].tagLine}`;
 
 });
-
-
- 
