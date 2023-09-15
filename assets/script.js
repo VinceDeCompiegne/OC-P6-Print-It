@@ -55,7 +55,7 @@ arrowArrowLeft.addEventListener("click",function(event){
 	(index<0)?index=(dots.length-1):index;
 
 	imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`;
-	imageCarrousel.alt = `${slides[index].tagLine}`;
+	imagetagLine.innerHTML = `${slides[index].tagLine}`;
 	dots[index].classList.toggle('dot_selected');
 });
 
@@ -69,6 +69,6 @@ arrowArrowRight.addEventListener("click",function(){
 
 	dots[index].classList.toggle('dot_selected');
 	imageCarrousel.src = `./assets/images/slideshow/${slides[index].image}`;
-	imageCarrousel.alt = `${slides[index].tagLine}`;
+	imagetagLine.innerHTML = `${slides[index].tagLine}`;
 
 });
