@@ -33,8 +33,8 @@ describe('Tests du carrousel', () => {
         // Obtenez l'index après avoir cliqué
         cy.get('.dot').first().invoke('index').then((clickedIndex) => {
           // Vérifiez que l'image et la légende sont correctes
-          cy.get('.banner-img').first().should('have.attr', 'src', `./assets/images/slideshow/${slides[clickedIndex].image}`);
-          cy.get('.banner-img').first().should('have.attr', 'alt', `${slides[clickedIndex].tagLine}`);
+          cy.get('.banner-img').should('have.attr', 'src', `./assets/images/slideshow/${slides[clickedIndex].image}`);
+          cy.get('p.tag-line').should('have.html', `${slides[clickedIndex].tagLine}`);
         });
 
     });
@@ -48,7 +48,7 @@ describe('Tests du carrousel', () => {
         cy.get('.dot').last().invoke('index').then((clickedIndex) => {
           // Vérifiez que l'image et la légende sont correctes
           cy.get('.banner-img').should('have.attr', 'src', `./assets/images/slideshow/${slides[clickedIndex].image}`);
-          cy.get('.banner-img').should('have.attr', 'alt', `${slides[clickedIndex].tagLine}`);
+          cy.get('p.tag-line').should('have.html', `${slides[clickedIndex].tagLine}`);
         });
 
     });
@@ -70,7 +70,7 @@ describe('Tests du carrousel', () => {
         cy.get('.dot_selected').first().invoke('index').then((clickedIndex) => {
           // Vérifiez que l'image et la légende sont correctes
           cy.get('.banner-img').should('have.attr', 'src', `./assets/images/slideshow/${slides[clickedIndex].image}`);
-          cy.get('.banner-img').should('have.attr', 'alt', `${slides[clickedIndex].tagLine}`);
+          cy.get('p.tag-line').should('have.html', `${slides[clickedIndex].tagLine}`);
         });
 
       }
@@ -88,7 +88,7 @@ describe('Tests du carrousel', () => {
         cy.get('.dot_selected').first().invoke('index').then((clickedIndex) => {
           // Vérifiez que l'image et la légende sont correctes
           cy.get('.banner-img').should('have.attr', 'src', `./assets/images/slideshow/${slides[clickedIndex].image}`);
-          cy.get('.banner-img').should('have.attr', 'alt', `${slides[clickedIndex].tagLine}`);
+          cy.get('p.tag-line').should('have.html', `${slides[clickedIndex].tagLine}`);
         });
 
       }
