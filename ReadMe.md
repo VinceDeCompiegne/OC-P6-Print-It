@@ -5,9 +5,15 @@
 
 ## Technology used
 
+>### For runtime
+
 -  HTML
 -  CSS
 -  Javascript
+
+>### For testing
+
+-  Cypress
 
 ## Website
 
