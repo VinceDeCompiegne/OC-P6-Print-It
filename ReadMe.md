@@ -1,4 +1,14 @@
-# Print-It WebSite v.1
+# Print-It
 
-Projet réalisé dans le cadre de la formation de testeur QA chez OpenClassRooms dans un exercice de découverte de la programmation
-JavaScript, dans la réalisation d'un carroussel dans une page web pré-réalisé pour l'occasion.
+- **professionalizing project** carried out as part of QA tester training at OpenClassRooms.
+-  programming discovery exercise JavaScript, in the creation of a carousel in a web page pre-created for the occasion.
+
+## Technology used
+
+-  HTML
+-  CSS
+-  Javascript
+
+## Website
+
+-  [Print-It website](https://vincedecompiegne.github.io/OC-P6-Print-It/)
